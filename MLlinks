@@ -1,0 +1,206 @@
+
+Naive bayes
+-----------
+very good course on probability in 
+university of florida
+http://users.stat.ufl.edu/~winner/sta4321/
+
+explanation for bayes in manchester university
+http://syllabus.cs.manchester.ac.uk/ugt/2018/COMP24111/lectures.php
+
+stanford univerisity - Naive Bayes for text classification
+https://web.stanford.edu/class/cs124/lec/
+
+bayes example from Worcester Polytechnic Institute (WPI)
+http://web.cs.wpi.edu/~cs525/s13-MYE/lectures/6/
+
+bayes example explanation in university college london
+https://www.fil.ion.ucl.ac.uk/mfd_archive/2009/
+    
+    
+Naive Bayes algorithm is simple 
+
+In Naive Bayes if the conditional independence assumption actually holds, the classifier will converge quicker than discriminative models like logistic regression, 
+so you need less training data. (Even if the naive assumption does not hold good the training time is less)
+
+
+Naive Bayes works best when you have small training data set, relatively small features(dimensions). 
+If you have huge feature list, the model may not give you accuracy, because the likelihood would be distributed and may not follow the Gaussian or other distribution. 
+
+Another condition for Naive Bayes to work is that features should be independent of each other - if you understand the domain, then try to analyze 
+how each features are related to each other, are they affecting the each others likelihood. if not Naive Bayes can give you good result.
+
+
+
+ID3 algorithm explained
+https://slideplayer.com/slide/3955317/
+
+
+spam filtering using naive bayes
+https://www.cse.buffalo.edu/~bina/amrita/cse651C/day2/NaïveBayesLec4.pptx
+
+
+gini index
+https://paginas.fe.up.pt/~ec/files_1011/week%2008%20-%20Decision%20Trees.pdf
+take this
+https://www.cs.indiana.edu/~predrag/classes/2017fallb365/ch4.pdf
+
+CART - One
+https://www.google.com/search?ei=LMrNW-ecBYKv9QOR2Iv4Cg&q=decision+trees+CART+gini+index+ppt&oq=decision+trees+CART+gini+index+ppt&gs_l=psy-ab.3..33i22i29i30k1.2311.2834.0.2973.4.4.0.0.0.0.136.506.0j4.4.0....0...1c.1.64.psy-ab..0.4.502...0i22i30k1.0.PEsrzTa14AA
+
+Classification and Decision Trees
+www.cs.kent.edu/~jin/DM07/ClassificationDecisionTree.ppt
+
+
+GiniIndex explained
+http://dni-institute.in/blogs/cart-decision-tree-gini-index-explained/
+http://dni-institute.in/blogs/gini-index-work-out-example/
+
+
+
+    
+
+Day 3 references 
+
+decision tree Gini Index example - one - take this
+https://www.slideshare.net/amrsb/decision-trees-for-machine-learning?from_action=save
+
+decision tree Gini Index example - two
+https://www.cc.gatech.edu/~lsong/teaching/CSE6740/lecture6.pdf
+
+good explanation for income tax data set problem - decision tree
+https://eclass.upatras.gr/modules/document/file.php/ECON1332/Lecture3-BasicClassification.pdf
+
+
+Decision tree explained well
+https://web.fhnw.ch/personenseiten/taoufik.nouri/Data%20Mining/Course/Course6/DM-Part6.htm
+
+
+Continuous Attributes: Computing Gini Index - one
+
+https://www.cs.indiana.edu/~predrag/classes/2017fallb365/ch4.pdf
+
+
+Continuous Attributes: Computing Gini Index - two - take this
+www.cs.kent.edu/~jin/DM07/ClassificationDecisionTree.ppt
+
+
+Binary Attributes: Computing GINI Index
+
+https://www.cs.indiana.edu/~predrag/classes/2017fallb365/ch4.pdf
+
+Playing tennis - C4.5 worked example - take this
+https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/
+
+Data mining - decision tree explanied - all methods - take this
+hanj.cs.illinois.edu/bk3/bk3_slides/08ClassBasic.ppt
+
+comparison between Decision tree algorithms
+wonderful paper
+http://saiconference.com/Downloads/SpecialIssueNo10/Paper_3-A_comparative_study_of_decision_tree_ID3_and_C4.5.pdf
+
+
+
+
+    
+    
+
+Day 4 references
+
+1. talk about this paper on decision tree algorithm
+   comparison
+  http://saiconference.com/Downloads/SpecialIssueNo10/Paper_3- A_comparative_study_of_decision_tree_ID3_and_C4.5.pdf
+
+2. Cross Validation
+   https://www.cs.tau.ac.il/~nin/Courses/NC05/pr_l13.pdf
+
+3. kmeans clustering 
+   https://kjambi.kau.edu.sa/GetFile.aspx?id=187901&Lng...k-mean-         clustering.ppt
+
+4. bias and variance reference
+   http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.ppt
+
+5. bias and variance
+   https://jelenajovanovic.net/
+        
+        
+        
+        
+
+Day 4 references
+
+1a. talk about this paper on decision tree algorithm
+   comparison
+  http://saiconference.com/Downloads/SpecialIssueNo10/Paper_3- A_comparative_study_of_decision_tree_ID3_and_C4.5.pdf
+
+1b. Cross Validation - review this one first
+   https://www.cs.tau.ac.il/~nin/Courses/NC05/pr_l13.pdf
+
+3. kmeans clustering 
+   https://kjambi.kau.edu.sa/GetFile.aspx?id=187901&Lng...k-mean-         clustering.ppt
+
+4. bias and variance reference
+   http://www.cs.cmu.edu/~wcohen/10-601/bias-variance.ppt
+
+5. bias and variance
+
+6. What is generalisation error?
+   https://www.youtube.com/watch?v=kcmQXjVNhQE
+   https://jelenajovanovic.net/
+
+7. good machine learning examples
+   https://www.youtube.com/user/victorlavrenko/featured
+
+8. Generalisation error in ML
+   www2.cs.uh.edu/~ceick/6367/Learning%20Models.ppt
+
+9. Cross validation taken to this logical extreme
+   https://www.cs.cmu.edu/~schneide/tut5/node42.html
+
+10. Machine Learning Course by Andrew Ng
+    https://www.youtube.com/watch?v=PPLop4L2eGk&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN
+
+11. Linear regression with one variable
+https://www.youtube.com/watch?v=kHwlB_j7Hkc&index=4&list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN
+
+
+    
+    
+    
+1. Association Rule Mining
+http://www.inf.unibz.it/dis/teaching/DWDM/slides2010/lesson11-12-PatternMining.pdf
+
+2. Association Rule Mining
+hanj.cs.illinois.edu/bk3/bk3_slides/06FPBasic.ppt
+
+
+3. Mining Association Rules in Large Databases
+https://fenix.tecnico.ulisboa.pt/downloadFile/3779571245397/12asso.pdf
+
+
+Frequent Itemsets
+http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html
+    
+    
+    
+    
+
+recommendation
+
+collaborative filtering - user based
+3. https://www.math.uci.edu/icamp/courses/math77b/lecture_12w/pdfs/Chapter%2002%20-%20Collaborative%20recommendation.pdf
+
+
+content based recommendation
+2.
+https://www.ics.uci.edu/~welling/teaching/CS77Bwinter12/presentations/Slides_Recommender_Systems_Introduction_Version_Oct_2011/ppt/Chapter%2003%20-%20Content-based%20recommendation.ppt
+
+
+Item based collaborative filtering
+https://ashokharnal.wordpress.com/2014/12/18/worked-out-example-item-based-collaborative-filtering-for-recommenmder-engine/
+
+
+    
+    
+    
+
