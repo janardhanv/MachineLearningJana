@@ -1,0 +1,185 @@
+Decision Tree implementations differ primarily along these axes:
+
+the splitting criterion (i.e., how "variance" is calculated)
+
+whether it builds models for regression (continuous variables, e.g., a score) as well as classification (discrete variables, e.g., a class label)
+
+technique to eliminate/reduce over-fitting
+
+whether it can handle incomplete data
+
+
+The major Decision Tree implementations are:
+
+ID3, or Iterative Dichotomizer, was the first of three Decision Tree implementations developed by Ross Quinlan (Quinlan, J. R. 1986. Induction of Decision Trees. Mach. Learn. 1, 1 (Mar. 1986), 81-106.)
+
+CART, or Classification And Regression Trees is often used as a generic acronym for the term Decision Tree, though it apparently has a more specific meaning. In sum, the CART implementation is very similar to C4.5; the one notable difference is that CART constructs the tree based on a numerical splitting criterion recursively applied to the data, whereas C4.5 includes the intermediate step of constructing rule sets.
+
+C4.5, Quinlan's next iteration. The new features (versus ID3) are: (i) accepts both continuous and discrete features; (ii) handles incomplete data points; (iii) solves over-fitting problem by (very clever) bottom-up technique usually known as "pruning"; and (iv) different weights can be applied the features that comprise the training data. Of these, the first three are very important--and I would suggest that any DT implementation you choose has all three. The fourth (differential weighting) is much less important
+
+C5.0, the most recent Quinlan iteration. This implementation is covered by a patent and probably, as a result, is rarely implemented (outside of commercial software packages). I have never coded a C5.0 implementation myself (I have never even seen the source code) so I can't offer an informed comparison of C5.0 versus C4.5. I have always been skeptical about the improvements claimed by its inventor (Ross Quinlan)--for instance, he claims it is "several orders of magnitude" faster than C4.5. Other claims are similarly broad ("significantly more memory efficient") and so forth. I'll just point you to studies which report the result of comparison of the two techniques and you can decide for yourself.
+
+CHAID (chi-square automatic interaction detector) actually predates the original ID3 implementation by about six years (published in a Ph.D. thesis by Gordon Kass in 1980). I know every little about this technique.The R Platform has a Package called CHAID which includes excellent documentation
+
+MARS (multi-adaptive regression splines) is actually a term trademarked by the original inventor of MARS, Salford Systems. As a result, MARS clones in libraries not sold by Salford are named something other than MARS--e.g., in R, the relevant function is polymars in the poly-spline library. Matlab and Statistica also have implementations with MARS-functionality
+
+
+Conditional Inference Trees
+Decision Stump - A decision stump is a machine learning model consisting of a one-level decision tree.[1] That is, it is a decision tree with one internal node (the root) which is immediately connected to the terminal nodes (its leaves). A decision stump makes a prediction based on the value of just a single input feature. Sometimes they are also called 1-rules
+
+M5P is a reconstruction of Quinlan's M5 algorithm for inducing trees of regression models
+M5P combines a conventional decision tree with the possibility of linear regression functions at the nodes
+
+
+
+
+
+decision trees advantages
+
+decision trees are easy to understand and have less learning curve (easy to understand, but not easy to build, with pun intended)
+
+decision trees require no domain knowledge
+
+The learning and classification steps of a 
+decision tree are simple and fast
+
+decision trees automatically do feature selection
+and variable screening
+
+algorithms using decision trees are easy to explain 
+to top-management
+
+this is not only used in ML, but this is widely used tool to take business decisions by CEOs, board senior management, like growing bottom line or topline, whether to acquire a startup or leave it
+
+if there are non-linear relationships between the features of data, it does not affect the performance of the trees
+
+decision trees do not require special effort from the users in terms of data preparation
+
+
+
+decision trees dis-advantages
+
+decision trees tend to be very long
+decision trees have much lesser performance metric
+compared to naive bayes and SVM
+
+
+
+
+
+
+
+ID3 handles only categorical values in its inputs and it 
+is used for classification only
+
+"Change in Variance" method is used for creating regresssion trees
+
+Gini Index is the parameter used in CART algorithm and it is applicable both for categorical and continuous input variables
+
+Then we have the C4.5 algorithm which is applicable for both categorical and continuous input variables
+
+
+ID3 Vs C4.5
+
+1. C4.5 uses information gain when generating the decision tree
+
+2. Although other systems also incorporate pruning, C4.5 uses a single-pass pruning process to mitigate over-fitting. Pruning results in many improvements
+
+3. Third, C4.5 can work with both continuous and discrete data. My understanding is it does this by specifying ranges or thresholds for continuous data thus turning continuous data into discrete data
+
+4. Finally, incomplete data is dealt with in its own ways by marking
+   as ?
+
+5. Handling attributes with differing costs
+
+
+C4.5 Vs C5.0
+
+Quinlan also created C5.0 and See5 (C5.0 for Unix/Linux, See5 for Windows) which he markets commercially. C5.0 offers a number of improvements on C4.5
+
+Speed of the algorithm - C5.0 is significantly faster than C4.5 (several orders of magnitude)
+
+Memory usage - C5.0 is more memory efficient than C4.5
+
+Smaller decision trees - C5.0 gets similar results to C4.5 with considerably smaller decision trees
+
+Support for boosting - Boosting improves the trees and gives them more accuracy
+
+Weighting - C5.0 allows you to weight different cases and misclassification types
+
+Winnowing - a C5.0 option automatically winnows the attributes to remove those that may be unhelpful
+
+
+
+
+
+
+what did we cover so far in decision trees?
+
+ID3 handles only categorical values in its inputs and it 
+is used for classification only
+
+"Change in Variance" method is used for creating regresssion trees
+
+Gini Index is the parameter used in CART algorithm and it is applicable both for categorical and continuous input variables
+
+Then we have the C4.5 which is an improvement algorithm which is applicable for both categorical and continuous input variables
+
+
+naive bayes advantages
+
+Very simple, easy to implement and fast
+
+A generative model such as Naive Bayes makes dealing with missing values a lot easier
+
+If the NB conditional independence assumption holds, then it will converge quicker than discriminative models like logistic regression
+
+Even if the NB assumption doesn’t hold, it works great in practice
+Need less training data
+Highly scalable. It scales linearly with the number of predictors and data points
+Can be used for both binary and mult-iclass classification problems
+Can make probabilistic predictions
+
+Handles continuous and discrete data.
+Not sensitive to irrelevant features
+
+
+
+naive bayes dis-advantages
+
+data scarcity
+continuous features
+very strong naive bayes assumption
+
+
+
+
+
+
+http://norvig.com/spell-correct.html
+This spell checker is the properitery work of and 
+created by peter norvig at the above webpage. 
+We are using this to understand naive bayes 
+classification algorithm
+
+argmaxc ? candidates P(c|w) 
+By Bayes' Theorem this is equivalent to:
+argmaxc ? candidates P(c) P(w|c) / P(w)
+
+P(c|w) = P(c) P(w|c) / P(w)
+
+Since P(w) is the same for every possible candidate c, we can factor it out, giving: argmaxc ? candidates P(c) P(w|c)
+
+The four parts of this expression are:
+Selection Mechanism: argmax 
+We choose the candidate with the highest combined probability.
+Candidate Model: c ? candidates
+This tells us which candidate corrections, c, to consider
+
+Language Model: P(c) 
+The probability that c appears as a word of English text. For example, occurrences of "the" make up about 7% of English text, so we should have P(the) = 0.07
+
+Error Model: P(w|c)
+The probability that w would be typed in a text when the author meant c. For example, P(teh|the) is relatively high, but P(theeexyz|the) would be very low.
+
+
